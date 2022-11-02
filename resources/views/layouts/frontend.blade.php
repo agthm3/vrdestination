@@ -1,6 +1,200 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+    <script src="https://kit.fontawesome.com/795e24dc42.js" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Virtual Reality Destination</title>
+
+    <!-- Template CSS -->
+    {{-- <link rel="stylesheet" href="assets/css/style-liberty.css" /> --}}
+    <link rel="stylesheet" href="{{ url('/frontend/css/style-liberty.css') }}" />
+    <link rel="stylesheet" href="{{ url('go-trip-liberty/assets/css/style-liberty.css') }}" />
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+
+<body id="home">
+    <section class="w3l-header-4 header-sticky">
+        <!--header-->
+        @include('components/frontend/navbar')
+        <!--/header-->
+    </section>
+    {{-- <script src="assets/js/jquery-3.3.1.min.js"></script> --}}
+    <script src="{{ '/frontend/js/jquery-3.3.1.min.js' }}"></script>
+    <!-- Common jquery plugin -->
+    <!--bootstrap working-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--bootstrap working//-->
+    <!--/MENU-JS-->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!--//MENU-JS-->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $(".navbar-toggler").click(function() {
+                $("body").toggleClass("noscroll");
+            });
+        });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <!--theme switcher dark and light mode script-->
+    <script>
+        const bodyElement = document.querySelector("body");
+        const themeToggle = document.querySelector("#themeToggle");
+        const darkModeMql = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        );
+
+        const currentTheme = localStorage.getItem("theme") ?
+            localStorage.getItem("theme") :
+            userPreference(darkModeMql);
+
+        if (currentTheme) {
+            bodyElement.classList.add(currentTheme);
+
+            if (currentTheme === "dark") {
+                themeToggle.checked = true;
+            }
+        }
+
+        function userPreference(e) {
+            if (e.matches) {
+                bodyElement.classList.add("dark");
+                return "dark";
+            } else {
+                bodyElement.classList.remove("dark");
+                return "";
+            }
+        }
+
+        darkModeMql.addListener(userPreference);
+
+        function themeSwitcher(e) {
+            if (e.target.checked) {
+                bodyElement.classList.add("dark");
+                localStorage.setItem("theme", "dark");
+            } else {
+                bodyElement.classList.remove("dark");
+                localStorage.setItem("theme", "");
+            }
+        }
+
+        themeToggle.addEventListener("change", themeSwitcher);
+    </script>
+    <!--theme switcher dark and light mode script//-->
+
+    <section class="w3l-main-slider">
+        <!-- main-slider -->
+        <div class="companies20-content">
+            <div class="owl-one owl-carousel owl-theme">
+                <div class="item text-center">
+                    <li>
+                        <div class="slider-info banner-view bg bg2">
+                            <div class="">
+                                <video autoplay muted loop id="myVideo" class="fullscreen-bg">
+                                    <source src="/public/go-trip-liberty/assets/videos/video2.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                            <div class="banner-info">
+                                <div class="container content">
+                                    <div class="banner-info-bg mr-auto">
+                                        <h5>
+                                            <a href="#">
+                                                <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
+                                                <span style="color: #ffc107">VR</span><span
+                                                    class="text-white">D</span><span
+                                                    class="text-white text-lowercase">estination</span>
+                                            </a>
+                                        </h5>
+                                        <p class="text-secondary fw-bolder">
+                                            Liburan kali ini,
+                                            <span class="text-white">Mau Kemana?</span>
+                                        </p>
+
+                                        <!-- <p>
+                                                Conse ctetur Lorem ipsum dolor
+                                                sit amet adipi sicing elit.
+                                                Quae, velit recu sandae eum
+                                                necessi tatibus bland itiis
+                                                adipisci Mollitia placeat modi
+                                                explicabo voluptatum corporis.
+                                            </p> -->
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4" href="tentang.html">Tentang Kami</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/owl.carousel.js"></script>
+        <!-- script for -->
+        <script>
+            $(document).ready(function() {
+                $(".owl-one").owlCarousel({
+                    loop: true,
+                    margin: 0,
+                    nav: false,
+                    responsiveClass: true,
+                    autoplay: false,
+                    autoplayTimeout: 5000,
+                    autoplaySpeed: 1000,
+                    autoplayHoverPause: false,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false,
+                        },
+                        480: {
+                            items: 1,
+                            nav: false,
+                        },
+                        667: {
+                            items: 1,
+                            nav: true,
+                        },
+                        1000: {
+                            items: 1,
+                            nav: true,
+                        },
+                    },
+                });
+            });
+        </script>
+        <!-- //script -->
+        <!-- /main-slider -->
+    </section>
+
     <section class="w3l-specification-6">
         <div class="specification-layout editContent">
             <div class="container-fluid">
@@ -22,7 +216,8 @@
                                     Selatan.
                                     <i class="fa-solid fa-circle-chevron-up"></i>
                                 </p>
-                                <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi Virtual!
+                                <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
+                                    Virtual!
                                     <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                 </a>
                             </div>
@@ -49,8 +244,8 @@
                                             Maros, Provinsi Sulawesi
                                             Selatan.
                                         </p>
-                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
-                                            Virtual!
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white"
+                                            href="#">Kunjungi Virtual!
                                             <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                         </a>
                                     </div>
@@ -71,8 +266,8 @@
                                             diantaranya memancing ikan, atau
                                             bakar ikan di pinggir destinasi.
                                         </p>
-                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
-                                            Virtual!
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white"
+                                            href="#">Kunjungi Virtual!
                                             <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                         </a>
                                     </div>
@@ -93,8 +288,8 @@
                                             memberi makan ternak atau
                                             menanam bibit.
                                         </p>
-                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
-                                            Virtual!
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white"
+                                            href="#">Kunjungi Virtual!
                                             <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                         </a>
                                     </div>
@@ -115,8 +310,8 @@
                                             paralayang dari ketinggialn
                                             300meter dari permukaan laut.
                                         </p>
-                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
-                                            Virtual!
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white"
+                                            href="#">Kunjungi Virtual!
                                             <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                         </a>
                                     </div>
@@ -162,7 +357,8 @@
                             </p>
                             <div class="top-gap">
                                 <h5>Rp80.000</h5>
-                                <a href="#url" class="icon text-center"><span class="fa fa-chevron-right"></span></a>
+                                <a href="#url" class="icon text-center"><span
+                                        class="fa fa-chevron-right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -187,7 +383,8 @@
                             </p>
                             <div class="top-gap">
                                 <h5>Rp80.000</h5>
-                                <a href="#url" class="icon text-center"><span class="fa fa-chevron-right"></span></a>
+                                <a href="#url" class="icon text-center"><span
+                                        class="fa fa-chevron-right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -212,7 +409,8 @@
                             </p>
                             <div class="top-gap">
                                 <h5>Rp80.000</h5>
-                                <a href="#url" class="icon text-center"><span class="fa fa-chevron-right"></span></a>
+                                <a href="#url" class="icon text-center"><span
+                                        class="fa fa-chevron-right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -261,65 +459,37 @@
         </div>
     </section>
 
-    <section class="w3l-footer-29-main">
-        <div class="footer-29 py-5">
-            <div class="container">
-                <div class="grid-col-4 footer-top-29">
-                    <div class="footer-list-29 footer-1">
-                        <h2 class="footer-title-29">Kontak Kami</h2>
-                        <ul>
-                            <li>
-                                <p>
-                                    <span class="fa fa-map-marker"></span>Makassar,Jln.Telkomas Raya
-                                </p>
-                            </li>
-                            <li>
-                                <a href="tel:+7-800-999-800"><span class="fa fa-phone"></span>
-                                    0853-4028-4153</a>
-                            </li>
-                            <li>
-                                <a href="mailto:estate-mail@support.com" class="mail"><span
-                                        class="fa fa-envelope-open-o"></span>
-                                    admin@vrdestination.com</a>
-                            </li>
-                        </ul>
-                        <div class="main-social-footer-29">
-                            <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                            <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                            <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                            <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
-                            <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
-                        </div>
-                    </div>
-                    <div class="footer-list-29 footer-2">
-                        <ul>
-                            <h6 class="footer-title-29">Kategori</h6>
+    @include('components/frontend/footer')
 
-                            <li><a href="#pages">Danau</a></li>
-                            <li><a href="#pages">Situs Prasejarah</a></li>
-                            <li><a href="#pages">Museum</a></li>
-                            <li><a href="#pages">Stadion</a></li>
-                            <li><a href="#pages">Pantai</a></li>
-                            <li><a href="">Gunung</a></li>
-                            <li><a href="#">Monumen</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-list-29 footer-4">
-                        <ul>
-                            <h6 class="footer-title-29">Quick Menu</h6>
-                            <li><a href="#url"> Artikel</a></li>
-                            <li><a href="#url"> Paket Harga</a></li>
-                            <li><a href="#url">Akun</a></li>
-                            <li><a href="#url"> Tentang Kami</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bottom-copies text-center">
-                    <p class="copy-footer-29">
-                        © 2020 Go Trip. All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-@endsection
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-chevron-up"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- /move top -->
+</body>
+
+</html>
