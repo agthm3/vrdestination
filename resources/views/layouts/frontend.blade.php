@@ -10,8 +10,7 @@
     <title>Virtual Reality Destination</title>
 
     <!-- Template CSS -->
-    {{-- <link rel="stylesheet" href="assets/css/style-liberty.css" /> --}}
-    <link rel="stylesheet" href="{{ url('/frontend/css/style-liberty.css') }}" />
+
     <link rel="stylesheet" href="{{ url('go-trip-liberty/assets/css/style-liberty.css') }}" />
     <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
@@ -24,10 +23,12 @@
         <!--/header-->
     </section>
     {{-- <script src="assets/js/jquery-3.3.1.min.js"></script> --}}
-    <script src="{{ '/frontend/js/jquery-3.3.1.min.js' }}"></script>
+
+    <script src="{{ url('go-trip-liberty/assets/js/jquery-3.3.1.min.js') }}"></script>
     <!-- Common jquery plugin -->
     <!--bootstrap working-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    {{-- <script src="{{ assets / js / bootstrap . min . js }}"></script> --}}
+    <script src="{{ url('go-trip-liberty/assets/js/bootstrap.min.js') }}"></script>
     <!--bootstrap working//-->
     <!--/MENU-JS-->
     <script>
@@ -121,7 +122,9 @@
                         <div class="slider-info banner-view bg bg2">
                             <div class="">
                                 <video autoplay muted loop id="myVideo" class="fullscreen-bg">
-                                    <source src="/public/go-trip-liberty/assets/videos/video2.mp4" type="video/mp4" />
+
+                                    <source src="{{ url('go-trip-liberty/assets/videos/video2.mp4') }}"
+                                        type="video/mp4" />
                                 </video>
                             </div>
                             <div class="banner-info">
@@ -139,15 +142,6 @@
                                             Liburan kali ini,
                                             <span class="text-white">Mau Kemana?</span>
                                         </p>
-
-                                        <!-- <p>
-                                                Conse ctetur Lorem ipsum dolor
-                                                sit amet adipi sicing elit.
-                                                Quae, velit recu sandae eum
-                                                necessi tatibus bland itiis
-                                                adipisci Mollitia placeat modi
-                                                explicabo voluptatum corporis.
-                                            </p> -->
                                         <a class="btn btn-theme2 mt-lg-5 mt-4" href="tentang.html">Tentang Kami</a>
                                     </div>
                                 </div>
@@ -157,7 +151,7 @@
                 </div>
             </div>
         </div>
-        <script src="assets/js/owl.carousel.js"></script>
+        <script src="{{ url('go-trip-liberty/assets/js/owl.carousel.js ') }}"></script>
         <!-- script for -->
         <script>
             $(document).ready(function() {
@@ -194,7 +188,6 @@
         <!-- //script -->
         <!-- /main-slider -->
     </section>
-
     <section class="w3l-specification-6">
         <div class="specification-layout editContent">
             <div class="container-fluid">
@@ -357,8 +350,7 @@
                             </p>
                             <div class="top-gap">
                                 <h5>Rp80.000</h5>
-                                <a href="#url" class="icon text-center"><span
-                                        class="fa fa-chevron-right"></span></a>
+                                <a href="#url" class="icon text-center"><span class="fa fa-chevron-right"></span></a>
                             </div>
                         </div>
                     </div>
