@@ -95,7 +95,8 @@
                                     Selatan.
                                     <i class="fa-solid fa-circle-chevron-up"></i>
                                 </p>
-                                <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
+                                <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white"
+                                    href="https://ths.li/Xs7SiZ">Kunjungi
                                     Virtual!
                                     <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                 </a>
@@ -123,7 +124,8 @@
                                             Maros, Provinsi Sulawesi
                                             Selatan.
                                         </p>
-                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white"
+                                            href="https://ths.li/Vu6uts">Kunjungi
                                             Virtual!
                                             <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                         </a>
@@ -167,7 +169,8 @@
                                             memberi makan ternak atau
                                             menanam bibit.
                                         </p>
-                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white" href="#">Kunjungi
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4 bg-warning text-white"
+                                            href="https://ths.li/SJAvM7">Kunjungi
                                             Virtual!
                                             <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                                         </a>
@@ -299,7 +302,9 @@
             <div class="container">
                 <div class="row">
                     <div class="column2 col-lg-6">
-                        <img src="assets/images/b1.jpg" alt="product" class="img-responsive" />
+                        {{-- <img src="assets/images/b1.jpg" alt="product" class="img-responsive" /> --}}
+                        <img src="{{ url('go-trip-liberty/assets/images/gubernur.jpg') }}" alt="product"
+                            class="img-responsive" />
                     </div>
                     <div class="nature-row coloum4 col-lg-6">
                         <h6 class="small-title">Artikel Terbaru</h6>

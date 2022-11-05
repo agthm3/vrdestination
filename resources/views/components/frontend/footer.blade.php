@@ -44,10 +44,10 @@
                 <div class="footer-list-29 footer-4">
                     <ul>
                         <h6 class="footer-title-29">Quick Menu</h6>
-                        <li><a href="#url"> Artikel</a></li>
-                        <li><a href="#url"> Paket Harga</a></li>
-                        <li><a href="#url">Akun</a></li>
-                        <li><a href="#url"> Tentang Kami</a></li>
+                        <li><a href="{{ route('artikel-index') }}"> Artikel</a></li>
+                        {{-- <li><a href="#url"> Paket Harga</a></li> --}}
+                        {{-- <li><a href="#url">Akun</a></li> --}}
+                        <li><a href="{{ route('tentang-index') }}"> Tentang Kami</a></li>
                     </ul>
                 </div>
             </div>
