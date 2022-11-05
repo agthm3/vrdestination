@@ -21,11 +21,12 @@
                         </li>
                     </ul>
                     <div class="main-social-footer-29">
-                        <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                        <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                        <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                        <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
-                        <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                        {{-- <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                        <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a> --}}
+                        <a href="https://www.instagram.com/vrdestination/" class="instagram"><span
+                                class="fa fa-instagram"></span></a>
+                        {{-- <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
+                        <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a> --}}
                     </div>
                 </div>
                 <div class="footer-list-29 footer-2">
