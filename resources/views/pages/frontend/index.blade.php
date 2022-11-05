@@ -201,7 +201,7 @@
             </div>
         </div>
     </section>
-
+    {{-- 
     <section class="w3l-covers-18">
         <div class="covers-main editContent">
             <div class="container">
@@ -292,7 +292,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="w3l-teams-15">
         <div class="team-single-main editContent">
             <div class="container">

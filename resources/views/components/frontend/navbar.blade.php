@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark stroke">
             <h1>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ '/' }}">
                     <img src="/assets/images/logo.png" style="max-width: 70px" class="mt-2" alt="" />
                     <i class="fa fa-solid fa-vr-cardboard fa-beat"></i>
                     <span style="color: #ffc107">VR</span>Destination
@@ -19,20 +19,20 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-lg-5">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Beranda
+                        <a class="nav-link" href="{{ route('home') }}">Beranda
                             <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item @@about__active">
                         <a class="nav-link" href="{{ route('wisata-index') }}">Wisata</a>
                     </li>
                     <li class="nav-item @@services__active">
-                        <a class="nav-link" href="artikel.html">Artikel</a>
+                        <a class="nav-link" href="{{ route('artikel-index') }}">Artikel</a>
                     </li>
                     {{-- <li class="nav-item @@contact__active">
                         <a class="nav-link" href="price.html">Paket & Harga</a>
                     </li> --}}
                     <li class="nav-item @@contact__active">
-                        <a class="nav-link" href="tentang.html">Tentang VRDestination</a>
+                        <a class="nav-link" href="{{ route('tentang-index') }}">Tentang VRDestination</a>
                     </li>
                 </ul>
                 {{-- <div class="d-flex">

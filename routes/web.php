@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\WisataController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,11 +18,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages/frontend/index');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+// Wisata
 Route::get('/Wisata', [WisataController::class, 'index'])->name('wisata-index');
+
+// Artikel
+Route::get('/Artikel', [ArtikelController::class, 'index'])->name('artikel-index');
+
+
+// About
+Route::get('/Tentang', [AboutController::class, 'index'])->name('tentang-index');
 require __DIR__.'/auth.php';
