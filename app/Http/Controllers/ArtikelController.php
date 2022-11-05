@@ -17,6 +17,11 @@ class ArtikelController extends Controller
         return view('pages.artikel.index');
     }
 
+    //Tampilan statis
+    public function gubernur(){
+        return view('pages.artikel.detail-gubernur');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -317,7 +317,7 @@
                             Profesor Amiruddin. Terus dilanjutkan oleh Pak
                             Gubernur Zainal Basri Palaguna....
                         </p>
-                        <a href="artikel-detail.html" class="action-button btn mt-lg-5 mt-4">Baca Selengkapnya</a>
+                        <a href="{{ route('gubernur') }}" class="action-button btn mt-lg-5 mt-4">Baca Selengkapnya</a>
                     </div>
                 </div>
             </div>

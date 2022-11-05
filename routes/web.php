@@ -33,6 +33,7 @@ Route::get('/Wisata/Balla-ra-tea-ri-pucak', [WisataController::class, 'balla'])-
 
 // Artikel
 Route::get('/Artikel', [ArtikelController::class, 'index'])->name('artikel-index');
+Route::get('/Artikel/Gubernur-siapkan', [ArtikelController::class, 'gubernur'])->name('gubernur');
 
 
 // About
