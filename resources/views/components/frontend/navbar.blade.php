@@ -23,19 +23,19 @@
                             <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item @@about__active">
-                        <a class="nav-link" href="destination.html">Wisata</a>
+                        <a class="nav-link" href="{{ route('wisata-index') }}">Wisata</a>
                     </li>
                     <li class="nav-item @@services__active">
                         <a class="nav-link" href="artikel.html">Artikel</a>
                     </li>
-                    <li class="nav-item @@contact__active">
+                    {{-- <li class="nav-item @@contact__active">
                         <a class="nav-link" href="price.html">Paket & Harga</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item @@contact__active">
                         <a class="nav-link" href="tentang.html">Tentang VRDestination</a>
                     </li>
                 </ul>
-                <div class="d-flex">
+                {{-- <div class="d-flex">
                     <a href="{{ route('login') }}"
                         class="btn btn-master bg-white border border-white btn-secondary ml-3">
                         Masuk
@@ -43,7 +43,7 @@
                     <a href="{{ route('register') }}" class="btn btn-master btn-primary ml-2">
                         Daftar
                     </a>
-                </div>
+                </div> --}}
             </div>
             <!-- toggle switch for light and dark theme -->
             <div class="mobile-position">
