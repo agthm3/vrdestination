@@ -102,7 +102,7 @@
                         <img src="{{ url('go-trip-liberty/assets/images/teaching.png') }}" alt="product"
                             class="img-responsive" />
                         <h5 class="mt-2">
-                            <a href="destination-detail.html">Pucak Teaching Farm</a>
+                            <a href="{{ route('pucak') }}">Pucak Teaching Farm</a>
                         </h5>
                         {{-- <p class="para">Ticket Available</p> --}}
                     </div>
@@ -110,7 +110,7 @@
                         <img src="{{ url('go-trip-liberty/assets/images/kebun.png') }}" alt="product"
                             class="img-responsive" />
                         <h5 class="mt-2">
-                            <a href="destination-detail.html">Kebun Raya Pucak</a>
+                            <a href="{{ route('kebun') }}">Kebun Raya Pucak</a>
                         </h5>
                         {{-- <p class="para">Ticket Available</p> --}}
                     </div>
@@ -118,7 +118,7 @@
                         <img src="{{ url('go-trip-liberty/assets/images/paralayang.png') }}" alt="product"
                             class="img-responsive" />
                         <h5 class="mt-2">
-                            <a href="destination-detail.html">Paralayang</a>
+                            <a href="{{ route('paralayang') }}">Paralayang</a>
                         </h5>
                         {{-- <p class="para">Ticket Available</p> --}}
                     </div>
@@ -126,7 +126,7 @@
                         <img src="{{ url('go-trip-liberty/assets/images/balla.png') }}" alt="product"
                             class="img-responsive" />
                         <h5 class="mt-2">
-                            <a href="destination-detail.html">Balla Ra Tea Ri Pucak</a>
+                            <a href="{{ route('balla') }}">Balla Ra Tea Ri Pucak</a>
                         </h5>
                         {{-- <p class="para">Ticket Available</p> --}}
                     </div>

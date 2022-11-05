@@ -24,10 +24,12 @@
         <div class="content-with-photo4-block editContent">
             <div class="container">
                 <div class="my-bio">
-                    <img src="assets/images/1.jpg" alt="product" class="img-responsive about-me" />
-                    <h3 class="mt-lg-4 mt-3">Pucak Teaching Farm</h3>
+                    <img src="{{ url('go-trip-liberty/assets/images/balla.png') }}" alt="product"
+                        class="img-responsive about-me" />
+                    <h3 class="mt-lg-4 mt-3">Balla Ra Tea Ri Pucak</h3>
                     <p class="para mb-3">
-                        Pucak Teaching farm sudah dilengkapi dengan 3 buah
+                        Balla Ra Tea Ri Pucak merupakan kawasan wisata terpadu yang digagas oleh Yusran Jusuf, putra Maros
+                        Mantan PJ Walikota Makassar. sudah dilengkapi dengan 3 buah
                         kolam, kolam untuk orang dewasa dua buah dan kolam
                         untuk anak anak. Pada salah satu kolam renang yang
                         airnya jernih terdapat seluncuran yang bisa dipakai
@@ -47,17 +49,20 @@
                         Pucak Teaching Farm di Maros Sulawesi Selatan
                         ini,apalagi datang bersama keluarga.
                     </p>
-                    <p class="para mb-lg-3">
-                        Cum quo maiores asperiores sequi error alias molli
-                        aliquid pr Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit.inventore deleniti dolore sequi
-                        labore similique vitae.
-                    </p>
+
                 </div>
+                {{-- <div class="col-lg-6">
+                    <img src="https://www.theasys.io/viewer/jq8C73xHawWTCmfnvLmD2VjO8TUusM" alt="product"
+                        class="img-responsive about-me" />
+                </div> --}}
+                <iframe src="https://www.theasys.io/viewer/rCzMZ5okiKWGHI7Ept4eX29Ao3OvbK" allowfullscreen="true"
+                    frameborder="0" scrolling="no" allow="vr;gyroscope;accelerometer" height="450"
+                    style="width:100%;border:none;"></iframe>
             </div>
         </div>
     </section>
-    <section class="w3l-recent-work">
+
+    {{-- <section class="w3l-recent-work">
         <div class="jst-two-col">
             <div class="container">
                 <div class="row">
@@ -75,5 +80,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

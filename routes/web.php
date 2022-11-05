@@ -26,6 +26,10 @@ Route::get('/dashboard', function () {
 
 // Wisata
 Route::get('/Wisata', [WisataController::class, 'index'])->name('wisata-index');
+Route::get('/Wisata/Pucak-teaching-farm', [WisataController::class, 'pucak'])->name('pucak');
+Route::get('/Wisata/Kebun-raya-pucak', [WisataController::class, 'kebun'])->name('kebun');
+Route::get('/Wisata/Paralayang', [WisataController::class, 'paralayang'])->name('paralayang');
+Route::get('/Wisata/Balla-ra-tea-ri-pucak', [WisataController::class, 'balla'])->name('balla');
 
 // Artikel
 Route::get('/Artikel', [ArtikelController::class, 'index'])->name('artikel-index');

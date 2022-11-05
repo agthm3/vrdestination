@@ -17,6 +17,20 @@ class WisataController extends Controller
         return view('pages.wisata.index');
     }
 
+    // Link statis sementara
+    public function pucak(){
+        return view('pages.wisata.detail-pucak');
+    }
+    public function kebun(){
+        return view('pages.wisata.detail-kebun');
+    }
+    public function paralayang(){
+        return view('pages.wisata.detail-paralayang');
+    }
+    public function balla(){
+        return view('pages.wisata.detail-balla');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

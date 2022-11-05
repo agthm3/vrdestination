@@ -319,7 +319,7 @@
         </div>
     </section>
 
-    <section class="w3l-clients" id="client">
+    {{-- <section class="w3l-clients" id="client">
         <div class="call-w3">
             <div class="container text-center">
                 <div class="title-head">
@@ -333,5 +333,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
