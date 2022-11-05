@@ -27,7 +27,8 @@
                                             Liburan kali ini,
                                             <span class="text-white">Mau Kemana?</span>
                                         </p>
-                                        <a class="btn btn-theme2 mt-lg-5 mt-4" href="tentang.html">Tentang Kami</a>
+                                        <a class="btn btn-theme2 mt-lg-5 mt-4" href="{{ route('tentang-index') }}">Tentang
+                                            Kami</a>
                                     </div>
                                 </div>
                             </div>
